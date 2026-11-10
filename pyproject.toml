@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newtgapi"
+version = "10.4.0"
+description = "Python library for the Telegram Bot API 10.4 — HTML widgets, TON Wallet, ephemeral messages"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "newtgapi contributors" }]
+keywords = ["telegram", "bot-api", "widgets", "ton", "ton-wallet"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Homepage = "https://github.com/Ghostofnotwar/newtgapi"
+Repository = "https://github.com/Ghostofnotwar/newtgapi"
+Documentation = "https://core.telegram.org/bots/api"
+
+[tool.setuptools.packages.find]
+include = ["newtgapi*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
